@@ -1,0 +1,59 @@
+#sudokugrid {
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	width: max-content;
+	border-bottom: 3px solid black;
+	border-right: 3px solid black;
+	margin: 5em auto;
+}
+
+#sudokugrid div {
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	align-items: center;
+	display: table;
+	cursor: pointer;
+}
+
+#sudokugrid div.col0,
+#sudokugrid div.col3,
+#sudokugrid div.col6 {
+	border-left: 3px solid black;
+}
+
+#sudokugrid div.row0,
+#sudokugrid div.row3,
+#sudokugrid div.row6 {
+	border-top: 3px solid black;
+}
+
+#sudokugrid div span {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#sudokugrid div span.active {
+	background-color: red;
+	color: white;
+}
+
+#sudokugrid div span.done {
+	color: red;
+}
+
+#sudokugrid div span.vorgabe {
+	background-color: lightblue;
+}
+
+#solve {
+	background: blue;
+	color: white;
+	width: max-content;
+	padding: 10px;
+	margin: 10px auto;
+	cursor: pointer;
+}
